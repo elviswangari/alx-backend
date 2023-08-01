@@ -30,7 +30,7 @@ def get_locale():
     if locale in app.config["LANGUAGES"]:
         print(locale)
         return locale
-    
+
     if g.user:
         locale = g.user.get("locale")
         if locale and locale in app.config["LANGUAGES"]:
