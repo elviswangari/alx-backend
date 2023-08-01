@@ -30,8 +30,10 @@ def get_locale():
     if locale in app.config["LANGUAGES"]:
         print(locale)
         return locale
- 
+
     return request.accept_languages.best_match(app.config['LANGUAGES'])
+
+
 @app.route("/")
 def index():
     '''
